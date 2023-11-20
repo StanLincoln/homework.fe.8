@@ -14,4 +14,3 @@ switcher.addEventListener('click', () => {
   console.log(document.body.classList)
   localStorage.setItem('theme', document.body.classList)
 })
-
