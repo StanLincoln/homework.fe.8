@@ -22,7 +22,13 @@ a {
 li {
     list-style: none;
 }
-
+button{
+    cursor: pointer;
+    transition: all .3s ease;
+}
+button:hover {
+    transform: scale(1.1);
+}
 .wrapper {
     display: flex;
     width: 1440px;
