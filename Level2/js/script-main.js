@@ -39,6 +39,7 @@
   const liHome = document.createElement("li");
   const aHome = document.createElement("a");
   aHome.setAttribute("href", "#");
+  aHome.classList.add('nav__link');
   aHome.textContent = "Home";
   liHome.append(aHome);
   ulNav.append(liHome);
@@ -46,6 +47,7 @@
   const liAbout = document.createElement("li");
   const aAbout = document.createElement("a");
   aAbout.setAttribute("href", "#");
+  aAbout.classList.add('nav__link');
   aAbout.textContent = "About";
   liAbout.append(aAbout);
   ulNav.append(liAbout);
@@ -53,6 +55,7 @@
   const liStore = document.createElement("li");
   const aStore = document.createElement("a");
   aStore.setAttribute("href", "#");
+  aStore.classList.add('nav__link');
   aStore.textContent = "Store";
   liStore.append(aStore);
   ulNav.append(liStore);
@@ -224,32 +227,26 @@ form__container.append(button);
 /*------------------------Submit-Form----------------------------------*/
 const userFromStorage = JSON.parse(localStorage.getItem("userData"));
 if(userFromStorage){
-  nameInput.value = userFromStorage.name;
   emailInput.value = userFromStorage.email;
   passwordInput.value = userFromStorage.password;
-  passwordConfirmInput.value = userFromStorage.password;
 }
 
 const userArray = JSON.parse(localStorage.getItem('userArray')) || [];
 console.log(userArray);
 
-form.addEventListener("submit", (event) => {
+form__container.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const user = {
-    name: nameInput.value,
     email: emailInput.value,
     password: passwordInput.value,
-    passwordConfirm: passwordInput.value,
   };
 
   localStorage.setItem("userData", JSON.stringify(user));
 
   userArray.push(user);
-  nameInput.value = "";
   emailInput.value = "";
   passwordInput.value = "";
-  passwordConfirmInput.value = "";
 
   localStorage.setItem("userArray", JSON.stringify(userArray));
 });

@@ -117,10 +117,8 @@ form.append(button);
 /*------------------------Submit-Form----------------------------------*/
 const userFromStorage = JSON.parse(localStorage.getItem("userData"));
 if(userFromStorage){
-  nameInput.value = userFromStorage.name;
   emailInput.value = userFromStorage.email;
   passwordInput.value = userFromStorage.password;
-  passwordConfirmInput.value = userFromStorage.password;
 }
 
 const userArray = JSON.parse(localStorage.getItem('userArray')) || [];
@@ -130,19 +128,15 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const user = {
-    name: nameInput.value,
     email: emailInput.value,
     password: passwordInput.value,
-    passwordConfirm: passwordInput.value,
   };
 
   localStorage.setItem("userData", JSON.stringify(user));
 
   userArray.push(user);
-  nameInput.value = "";
   emailInput.value = "";
   passwordInput.value = "";
-  passwordConfirmInput.value = "";
 
   localStorage.setItem("userArray", JSON.stringify(userArray));
 });
