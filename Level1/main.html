@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/d49b83e7ab.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/form.css" />
+</head>
+<body>
+  <div class="wrap__container">
+    <header class="header__container">
+      <div class="header__logo">
+        <img src="img/Logo.svg" alt="logo" class="logo__img">
+        <p class="logo__title">Company</p>
+      </div>
+      <div class="header__links">
+        <nav class="header__nav">
+          <ul>
+            <li><a href="#" class="nav__link">Home</a></li>
+            <li><a href="#" class="nav__link">About</a></li>
+            <li><a href="#" class="nav__link">Store</a></li>
+          </ul>
+        </nav>
+        <div class="header__toggle">
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="header__selection">
+          <p>Account</p>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="left__box">
+        <h1 class="left__title">Hello world</h1>
+        <p>It is a long established fact that a reader will be distracted by the readable content</p>
+        <div class="btn">
+          <button class="btn__left">Button</button>
+          <button class="btn__right">Button</button>
+        </div>
+    </div>
+    <div class="right__container mpage">
+      <form class="form__container page">
+        <div class="form__header">
+            <h1 class="title">Login account</h1>
+            <div class="item__container">
+                <ul class="items">
+                  <li><i class="fa-brands fa-facebook-f"></i></li>
+                  <li><i class="fa-brands fa-google"></i></li>
+                  <li><i class="fa-brands fa-twitter"></i></li>
+                </ul>
+            </div>
+        </div>
+        <p>Or login using email & password</p>
+        <label for="email">Email address</label>
+        <input class="email" type="email" placeholder="hello@hey.com" required>
+        <label for="password">Password</label>
+        <input class="password" type="password" placeholder="••••••••••••" required>
+        <div class="check__container">
+            <div>
+                <input type="checkbox" name="terms" id="agree" checked>
+                <span class="custom-checkbox"></span>
+                <label id="checkbox__label" for="agree">Remember me</label>
+            </div>
+            <a href="#">Forgot password?</a>
+        </div>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+    </div>
+    </main>
+  </div>
+    <script src="js/script.js"></script> 
+</body>
+</html>

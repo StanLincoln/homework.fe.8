@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d49b83e7ab.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/form.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="left__container">
+        <img src="img/bear.svg" alt="bear" />
+      </div>
+      <div class="right__container">
+        <form class="form__container">
+          <div class="head__container">
+            <h1 class="title">Create account</h1>
+            <div class="item__container">
+              <ul class="items">
+                <li><i class="fa-brands fa-facebook-f"></i></li>
+                <li><i class="fa-brands fa-google"></i></li>
+                <li><i class="fa-brands fa-twitter"></i></li>
+              </ul>
+            </div>
+          </div>
+          <p>Or register using email & password</p>
+          <label for="name">Full name</label>
+          <input class="name" type="text" placeholder="John Rambo" required />
+          <label for="email">Email address</label>
+          <input
+            class="email"
+            type="email"
+            placeholder="hello@hey.com"
+            required
+          />
+          <label for="password">Create password</label>
+          <input
+            class="password"
+            type="password"
+            placeholder="••••••••••••"
+            required
+          />
+          <label for="password">Confirm password</label>
+          <input
+            class="password"
+            type="password"
+            placeholder="••••••••••••"
+            required
+          />
+          <div class="check__container">
+            <div>
+              <input type="checkbox" name="terms" id="agree" checked />
+              <span class="custom-checkbox"></span>
+            </div>
+            <label for="agree"
+              >I agree to the <a href="#">terms</a> &
+              <a href="#">privacy policy</a></label
+            >
+          </div>
+          <button type="submit">Register</button>
+        </form>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
